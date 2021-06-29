@@ -1,0 +1,11 @@
+/PostmanTool.Console/bin
+/PostmanTool.Console/obj
+
+/PostmanTool.Model/bin
+/PostmanTool.Model/obj
+
+
+/PostmanTool.Service/bin
+/PostmanTool.Service/obj
+
+/.vs
