@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace PostmanTool.Model
+﻿namespace PostmanTool.Service.PostmanDto
 {
     public class Info
     {

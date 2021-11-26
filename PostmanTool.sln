@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31410.357
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostmanTool.Console", "PostmanTool.Console\PostmanTool.Console.csproj", "{F7D06411-67BD-4331-90FD-63019FD8E362}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PostmanTool.Console", "PostmanTool.Console\PostmanTool.Console.csproj", "{F7D06411-67BD-4331-90FD-63019FD8E362}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostmanTool.Model", "PostmanTool.Model\PostmanTool.Model.csproj", "{9DD3920F-E4EF-4014-8F89-C3B710120B54}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostmanTool.Service", "PostmanTool.Service\PostmanTool.Service.csproj", "{A2A81EFA-B26A-4B35-B94B-D3618F812B78}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{F7D06411-67BD-4331-90FD-63019FD8E362}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7D06411-67BD-4331-90FD-63019FD8E362}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7D06411-67BD-4331-90FD-63019FD8E362}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9DD3920F-E4EF-4014-8F89-C3B710120B54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9DD3920F-E4EF-4014-8F89-C3B710120B54}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9DD3920F-E4EF-4014-8F89-C3B710120B54}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9DD3920F-E4EF-4014-8F89-C3B710120B54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2A81EFA-B26A-4B35-B94B-D3618F812B78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2A81EFA-B26A-4B35-B94B-D3618F812B78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2A81EFA-B26A-4B35-B94B-D3618F812B78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2A81EFA-B26A-4B35-B94B-D3618F812B78}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
