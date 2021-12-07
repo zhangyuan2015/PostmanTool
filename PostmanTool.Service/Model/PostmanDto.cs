@@ -1,95 +1,27 @@
-﻿namespace PostmanTool.Service.PostmanDto
+﻿namespace PostmanTool.Service.Model
 {
-    public class Info
+    public class PostmanDto
     {
         /// <summary>
         /// 
         /// </summary>
-        public string _postman_id { get; set; }
-        /// <summary>
-        /// MIA推送MES
-        /// </summary>
-        public string name { get; set; }
+        public int version { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public string schema { get; set; }
+        public List<CollectionsItem> collections { get; set; }
     }
 
-    public class Raw
+    public class CollectionsItem
     {
         /// <summary>
         /// 
         /// </summary>
-        public string language { get; set; }
-    }
-
-    public class Options
-    {
+        public string id { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public Raw raw { get; set; }
-    }
-
-    public class Body
-    {
-        /// <summary>
-        /// 
-        /// </summary>
-        public string mode { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public string raw { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public Options options { get; set; }
-    }
-
-    public class Url
-    {
-        /// <summary>
-        /// 
-        /// </summary>
-        public string raw { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public string protocol { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public List<string> host { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public List<string> path { get; set; }
-    }
-
-    public class Request
-    {
-        /// <summary>
-        /// 
-        /// </summary>
-        public string method { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public List<string> header { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public Body body { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public Url url { get; set; }
-    }
-
-    public class ItemItem
-    {
+        public string uid { get; set; }
         /// <summary>
         /// 
         /// </summary>
@@ -97,22 +29,110 @@
         /// <summary>
         /// 
         /// </summary>
-        public Request request { get; set; }
+        public string description { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public List<string> response { get; set; }
+        public string auth { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public string events { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public string variables { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public List<string> order { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public List<string> folders_order { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public ProtocolProfileBehavior protocolProfileBehavior { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public string createdAt { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public List<FoldersItem> folders { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public List<dynamic> requests { get; set; }
     }
 
-    public class Root
+    public class ProtocolProfileBehavior
+    {
+    }
+
+    public class FoldersItem
     {
         /// <summary>
         /// 
         /// </summary>
-        public Info info { get; set; }
+        public string id { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public List<ItemItem> item { get; set; }
+        public string uid { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public string name { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public string description { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public string auth { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public string events { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public string collection { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public string folder { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public List<string> order { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public List<string> folders_order { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public string owner { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public ProtocolProfileBehavior protocolProfileBehavior { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public string createdAt { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public string collectionId { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public string folderId { get; set; }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using PostmanTool.Service;
+using System.IO;
 
 namespace PostmanTool.Console
 {
@@ -7,12 +8,11 @@ namespace PostmanTool.Console
         static void Main(string[] args)
         {
             System.Console.Write("加载文件，输入文件路径：");
-            var filePath = System.Console.ReadLine();
+            //var filePath = System.Console.ReadLine();
+            var filePath = "D:\\Projects\\PostmanTool\\File\\Backup.postman_dump.json";
 
-            var jsonText = File.ReadAllText(filePath);
+            GroupingService.Grouping(filePath);
 
-
-            
             System.Console.Write("处理成功");
             System.Console.ReadLine();
         }
