@@ -1,8 +1,8 @@
 /PostmanTool.Console/bin
 /PostmanTool.Console/obj
 
-/PostmanTool.Model/bin
-/PostmanTool.Model/obj
+/PostmanTool.App/bin
+/PostmanTool.App/obj
 
 
 /PostmanTool.Service/bin
