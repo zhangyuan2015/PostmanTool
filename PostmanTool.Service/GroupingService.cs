@@ -4,9 +4,36 @@ namespace PostmanTool.Service
 {
     public static class GroupingService
     {
-        public static void Grouping(string filePath)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="fileStream"></param>
+        public static void GroupingByStream(Stream fileStream)
+        {
+            string jsonText = "";
+            using (StreamReader reader = new StreamReader(fileStream))
+            {
+                jsonText = reader.ReadToEnd();
+            }
+            GroupingCore(jsonText);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="filePath"></param>
+        public static string GroupingByPath(string filePath)
         {
             var jsonText = LoadFile(filePath);
+            return GroupingCore(jsonText);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="jsonText"></param>
+        public static string GroupingCore(string jsonText)
+        {
             dynamic groupingObjRoot = Deserialize<dynamic>(jsonText);
 
             List<dynamic> requestObjs = new List<dynamic>();
@@ -137,9 +164,7 @@ namespace PostmanTool.Service
                 postmanDto.collections.Add(collectionsItem);
             }
 
-            File.WriteAllText("D:\\Projects\\PostmanTool\\File\\res.json", SerializeObject(postmanDto));
-            Console.Write("OK");
-            Console.ReadLine();
+            return SerializeObject(postmanDto);
         }
 
         /// <summary>

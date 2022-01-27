@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PostmanTool.Console", "Post
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PostmanTool.Service", "PostmanTool.Service\PostmanTool.Service.csproj", "{A2A81EFA-B26A-4B35-B94B-D3618F812B78}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PostmanTool.App", "PostmanTool.App\PostmanTool.App.csproj", "{DFA26A26-6305-43A5-916C-3B8E6A72E9E1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostmanTool.App", "PostmanTool.App\PostmanTool.App.csproj", "{CBAC8263-8221-41F0-8F89-CD472DEEBF1D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{A2A81EFA-B26A-4B35-B94B-D3618F812B78}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2A81EFA-B26A-4B35-B94B-D3618F812B78}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A2A81EFA-B26A-4B35-B94B-D3618F812B78}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DFA26A26-6305-43A5-916C-3B8E6A72E9E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DFA26A26-6305-43A5-916C-3B8E6A72E9E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DFA26A26-6305-43A5-916C-3B8E6A72E9E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DFA26A26-6305-43A5-916C-3B8E6A72E9E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBAC8263-8221-41F0-8F89-CD472DEEBF1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBAC8263-8221-41F0-8F89-CD472DEEBF1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBAC8263-8221-41F0-8F89-CD472DEEBF1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBAC8263-8221-41F0-8F89-CD472DEEBF1D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

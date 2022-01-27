@@ -1,0 +1,98 @@
+﻿@page "/Group"
+@using PostmanTool.Service
+
+<PageTitle>分组</PageTitle>
+<div class="container">
+    <div class="row g-1" style="margin-top:10px;">
+        <div class="col-12">
+            <h3>选择分组文件</h3>
+        </div>
+    </div>
+
+    <div class="row g-1" style="margin-top:10px;">
+        <div class="col-10">
+            <InputUpload @bind-Value="@pageModel.UploadFile" Accept=".json" />
+        </div>
+        <div class="col-2">
+            <Button Color="Color.Primary" Icon="fa fa-fa" Text="提交" @onclick="ExecGroup" />
+        </div>
+    </div>
+
+    <div class="row g-1" style="margin-top:10px;">
+        <div class="col-12">
+            <Textarea rows="12" readonly @bind-Value="@pageModel.ResultContent"></Textarea>
+        </div>
+    </div>
+</div>
+@code {
+    PageModel pageModel = new PageModel();
+
+    private async Task GetFileContent()
+    {
+        pageModel.UploadFileName = pageModel.UploadFile.Name;
+
+        MemoryStream fileStream = new MemoryStream();
+        await pageModel.UploadFile.OpenReadStream(51200000).CopyToAsync(fileStream);
+        string fileContent = System.Text.Encoding.UTF8.GetString(fileStream.ToArray());
+        pageModel.UploadFileContent = fileContent;
+    }
+
+    private async Task ExecGroup()
+    {
+        try
+        {
+            await GetFileContent();
+            pageModel.ResultContent = GroupingService.GroupingCore(pageModel.UploadFileContent);
+        }
+        catch (Exception ex)
+        {
+            pageModel.ErrorMsg = ex.Message;
+            ShowMessage(ex.Message, Color.Danger);
+        }
+    }
+
+    /// <summary>
+    ///
+    /// </summary>
+    [Inject]
+    public MessageService? MessageService { get; set; }
+
+    private async Task ShowMessage(string msg, Color color)
+    {
+        await MessageService.Show(new MessageOption()
+            {
+                Content = msg,
+                Icon = "fa fa-info-circle",
+                Color = color,
+                ShowDismiss = true
+            });
+    }
+
+    private class PageModel
+    {
+        /// <summary>
+        ///
+        /// </summary>
+        public string UploadFileName { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
+        public IBrowserFile UploadFile { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
+        public string UploadFileContent { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
+        public string ResultContent { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
+        public string ErrorMsg { get; set; }
+    }
+}
